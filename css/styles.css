@@ -49,6 +49,8 @@
   --m-2: 2rem;
   --m-2-5: 2.5rem;
   --m-3: 3rem;
+  --m-4: 4rem;
+  --m-6: 6rem;
 
   --step--2: clamp(0.69rem, calc(0.61rem + 0.43vw), 0.96rem);
   --step--1: clamp(0.83rem, calc(0.72rem + 0.59vw), 1.2rem);
@@ -149,7 +151,7 @@ li {
 /* Hero Section */
 
 .hero {
-  margin-top: 180px;
+  margin-top: var(--m-6);
   font-size: var(--big-5-font-size);
 }
 
@@ -161,9 +163,78 @@ li {
 /* Free Form Section */
 
 .free_form {
-  margin: 100px auto;
-  padding: 4rem;
-  background-color: #39115A;
+  margin: var(--m-6) auto;
+  padding: var(--m-2-5);
+  background-color: #39115a;
   width: 882px;
   border-radius: 68px 0;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  gap: var(--m-1-5);
+}
+
+.form input {
+  width: 265px;
+  height: 45px;
+  border-radius: 23px;
+  margin-block: var(--m-1-5);
+}
+
+.req_quote {
+  color: var(--offwhite);
+  width: 211px;
+  height: 45px;
+  border-radius: 23px;
+  background-image: linear-gradient(to right, #d812ba, #7c09ac, #e70744);
+}
+
+/* Services Section */
+
+.services {
+  margin: var(--m-4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--m-3);
+}
+
+.service {
+  display: flex;
+  flex-direction: column;
+  gap: var(--m-2);
+  padding: var(--m-2-5);
+  height: 226px;
+  width: 342px;
+  /* background: radial-gradient(ellipse at top, #CC7954, transparent),
+    radial-gradient(ellipse at bottom, #6B01A5, transparent); */
+    background-color: #7c09ac;
+}
+
+.service h2 {
+  font-size: var(--m-2);
+}
+
+.service li {
+  font-size: var(--m-1);
+}
+
+/* Easy Steps Section */
+
+.easy_steps_section {
+  display: flex;
+  gap: var(--m-6);
+}
+
+.easy_points {
+  width: 50%;
+  font-size: var(--m-1-5);
+  font-weight: lighter;
+}
+
+.text-section {
+  width: 50%;
+  font-size: large;
 }
